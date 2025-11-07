@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae de Angela Briceño - Diseñadora Web</title>
+    
+    <style>
+        /* KEYFRAMES para el efecto de fondo animado (simula código) */
+        @keyframes subtle-scroll {
+            from { background-position: 0 0; }
+            to { background-position: 0 300px; } 
+        }
+
+        /* --- 1. CONFIGURACIÓN GENERAL Y FUENTES --- */
+        body {
+            font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.65;
+            margin: 0;
+            padding: 0;
+            color: #212121;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 16px; 
+            
+            /* FONDO CLARO (Estilo Lila/Gris) */
+            background-color: #F3F0F7; 
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%23ECE6F1' fill-opacity='0.7'%3E%3Cpath d='M0 0h10v10H0zM20 20h10v10H20zM40 40h10v10H40zM60 60h10v10H60zM80 80h10v10H80zM20 60h10v10H20zM40 80h10v10H40zM60 0h10v10H60zM80 20h10v10H80zM0 40h10v10H0zM60 20h10v10H60zM80 40h10v10H80zM0 60h10v10H0zM20 80h10v10H20zM40 0h10v10H40zM80 60h10v10H80zM20 40h10v10H20zM40 20h10v10H40zM60 80h10v10H60zM80 0h10v10H80zM0 20h10v10H0zM20 0h10v10H20zM40 60h10v10H40zM60 40h10v10H60zM80 80h10v10H80z'/%3E%3C/g%3E%3C/svg%3E");
+            animation: subtle-scroll 120s linear infinite;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 1000px;
+            margin: 80px auto; 
+            padding: 50px; 
+            background-color: #fff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            padding-top: 0;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* --- FOOTER GENERAL --- */
+        footer {
+            background-color: #f7f7f7; 
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            font-size: 0.8em;
+            color: #95a5a6; 
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* --- 2. CABECERA Y FOTO DE PERFIL --- */
+        header.perfil {
+            background-color: #4A3A5F; 
+            color: #ecf0f1;
+            padding: 40px 0;
+            margin-bottom: 30px; 
+            display: flow-root;
+            border-radius: 12px 12px 0 0;
+            text-align: left;
+            position: relative;
+        }
+        
+        .info-header {
+            max-width: 70%;
+            padding-left: 40px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        header .titulo {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #E8DAEF;
+        }
+
+        .contacto p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+        .perfil img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #9B59B6; 
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            object-fit: cover;
+        }
+        
+        .accessibility-controls {
+            padding-left: 40px;
+            padding-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .accessibility-controls button {
+            background-color: #9B59B6;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .accessibility-controls button:hover {
+            background-color: #8E44AD;
+        }
+
+        /* --- 3. SECCIONES GENERALES Y GRID --- */
+        .seccion {
+            padding: 30px 0;
+            margin-bottom: 10px;
+        }
+        
+        .seccion h2 {
+            color: #4A3A5F; 
+            border-bottom: 3px solid #9B59B6; 
+            padding-bottom: 5px;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+
+        main.contenedor {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px; 
+        }
+        
+        .seccion:nth-child(1) { grid-column: 1 / 2; } 
+        .seccion:nth-child(2) { grid-column: 2 / 3; } 
+        .seccion:nth-child(3), 
+        .seccion:nth-child(4) {
+            grid-column: 1 / 3; 
+        }
+
+        /* --- 4. EXPERIENCIA Y EDUCACIÓN (Ordenado y espaciado) --- */
+        .bloque-info {
+            margin-bottom: 30px;
+            border-left: 3px solid #E8DAEF; 
+            padding-left: 15px;
+        }
+
+        .bloque-info h3 {
+            color: #9B59B6; 
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .sub-info {
+            font-style: italic;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1em;
+            display: block;
+        }
+
+        .bloque-info ul {
+            list-style-type: square;
+            margin-left: 25px;
+            padding-left: 0;
+        }
+        .seccion p {
+            text-align: justify;
+        }
+
+        /* --- 5. HABILIDADES (Tags visuales) --- */
+        .lista-habilidades {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .lista-habilidades li {
+            background-color: #E8DAEF; 
+            color: #4A3A5F;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border-radius: 4px;
+            border-left: 6px solid #9B59B6; 
+            font-size: 0.95em;
+        }
+
+        /* ************************************ */
+        /* MODO ALTO CONTRASTE (WCAG Extremo) */
+        /* ************************************ */
+        body.high-contrast {
+            background-color: #000 !important;
+            color: #FFF !important;
+        }
+        body.high-contrast .contenedor {
+            background-color: #000 !important;
+            box-shadow: none !important;
+            border: 1px solid #FFF;
+        }
+        body.high-contrast header.perfil {
+            background-color: #000 !important;
+            color: #FFF !important;
+            border-bottom: 2px solid #FFFF00; /* Acento neón */
+        }
+        body.high-contrast .perfil img {
+            border: 5px solid #FFFF00 !important; /* Acento neón */
+        }
+        body.high-contrast header .titulo {
+            color: #FFFF00 !important; /* Acento neón */
+        }
+        body.high-contrast .seccion h2 {
+            color: #FFF !important;
+            border-bottom: 3px solid #FFFF00 !important; /* Acento neón */
+        }
+        body.high-contrast .lista-habilidades li {
+            background-color: #333 !important;
+            color: #FFF !important;
+            border-left: 6px solid #FFFF00 !important; /* Acento neón */
+        }
+        body.high-contrast .sub-info, body.high-contrast .contacto p {
+            color: #FFF !important;
+        }
+        body.high-contrast .bloque-info {
+             border-left: 3px solid #FFFF00 !important; /* Acento neón */
+        }
+        body.high-contrast .bloque-info h3 {
+             color: #FFFF00 !important; /* Acento neón */
+        }
+        body.high-contrast .accessibility-controls button {
+            background-color: #000 !important;
+            color: #FFFF00 !important;
+            border: 1px solid #FFFF00 !important;
+        }
+        body.high-contrast footer { 
+            background-color: #000 !important;
+        }
+        body.high-contrast footer p {
+            color: #FFF !important;
+        }
+
+        /* ************************************ */
+        /* MODO OSCURO MEJORADO */
+        /* ************************************ */
+        body.dark-mode {
+            background-color: #121212; 
+            color: #F1F1F1; 
+        }
+
+        body.dark-mode .contenedor {
+            background-color: #1e1e1e; 
+            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.08);
+        }
+
+        body.dark-mode header.perfil {
+            background-color: #330066; 
+        }
+        
+        body.dark-mode header .titulo {
+            color: #BB86FC; 
+        }
+        
+        body.dark-mode .seccion h2 {
+            color: #F1F1F1; 
+            border-bottom: 3px solid #BB86FC; 
+        }
+        
+        body.dark-mode .sub-info {
+            color: #ccc; 
+        }
+
+        body.dark-mode .bloque-info {
+             border-left: 3px solid #BB86FC; 
+        }
+
+        body.dark-mode .bloque-info h3 {
+             color: #BB86FC; 
+        }
+        
+        body.dark-mode .lista-habilidades li {
+            background-color: #2A2A38; 
+            color: #F1F1F1;
+            border-left: 6px solid #BB86FC;
+        }
+
+        body.dark-mode .accessibility-controls button,
+        body.dark-mode #toggle-theme {
+            background-color: #BB86FC; 
+            color: #121212; 
+        }
+
+        body.dark-mode footer { 
+            background-color: #222 !important; 
+        }
+        body.dark-mode footer p {
+            color: #F1F1F1 !important;
+        }
+
+
+        /* --- 7. MEDIA QUERIES para Móviles --- */
+        @media (max-width: 768px) {
+            main.contenedor {
+                grid-template-columns: 1fr; 
+                padding: 20px;
+                gap: 20px;
+                margin: 20px auto;
+            }
+            .seccion {
+                grid-column: 1 / 2 !important;
+                padding: 15px 0;
+            }
+            header.perfil {
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            .info-header {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+            .perfil img {
+                position: static;
+                margin: 0 auto 15px auto;
+                display: block;
+            }
+            .accessibility-controls {
+                padding-left: 20px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="perfil">
+        <img src="img/angela1.jpg" alt="Fotografía profesional de Angela Khatherine Briceño Villegas">
+
+        <div class="info-header">
+            <h1>Angela Khatherine Briceño Villegas</h1>
+            <p class="titulo">Diseñadora Web Junior | Especialista en Usabilidad y Accesibilidad</p>
+            <div class="contacto">
+                <p>📧 khatherine5@gmail.com</p>
+                <p>📱 644947319</p>
+                <p>📍 Alzira-España</p>
+                <p>🌐 Portfolio: https://www.youtube.com/watch?v=v7HyyOnixJ8</p> 
+            </div>
+        </div>
+        
+        <div class="accessibility-controls">
+            <button id="font-increase">A+ (Fuente)</button>
+            <button id="font-decrease">A- (Fuente)</button>
+            <button id="toggle-contrast">Alto Contraste</button>
+            <button id="toggle-theme">Modo Oscuro</button>
+        </div>
+         
+    </header>
+
+    <main class="contenedor">
+               
+        <section class="seccion">
+            <h2>Perfil Profesional</h2>
+            <p>Diseñadora Web Junior proactiva y orientada al detalle, con formación especializada en **Creación, Programación y Diseño de Páginas Web Dinámicas**. Experta en la aplicación de estándares de **Accesibilidad (WCAG)** y Usabilidad para garantizar experiencias digitales de alta calidad. Combino esta base técnica con una sólida experiencia en **gestión eficiente de la información y optimización de procesos** (adquirida en secretariado de dirección). Busco aplicar mi capacidad de análisis, meticulosidad y conocimientos en HTML, CSS, JavaScript y WordPress para impulsar la presencia digital efectiva de su organización.</p>
+        </section>
+
+        <section class="seccion">
+            <h2>Habilidades Técnicas y Blandas</h2>
+            <ul class="lista-habilidades">
+                <li>**Desarrollo Web (Front-End):** HTML5, CSS3, JavaScript (JS).</li>
+                <li>**CMS:** Desarrollo, personalización y mantenimiento con **WordPress**.</li>
+                <li>**Diseño:** Estrategias **Mobile-First** y Diseño Responsivo.</li>
+                <li>**Calidad Digital:** Aplicación de normativas **WCAG** (Accesibilidad) y Usabilidad.</li>
+                <li>**Gestión Documental:** Archivo, clasificación y organización de información.</li>
+                <li>**Software:** Ofimática Avanzada (MS Office: Excel, Word).</li>
+                <li>**Competencias:** Proactividad, Atención al Detalle y Organización.</li>
+            </ul>
+        </section>
+
+        <section class="seccion">
+            <h2>Educación</h2>
+            
+            <div class="bloque-info">
+                <h3>Creación, Programación y Diseño de Páginas Web Dinámicas, Accesibilidad y Usabilidad</h3>
+                <p class="sub-info">**[Institución/Plataforma Principal]** | [Año de Finalización]</p>
+            </div>
+
+            <div class="bloque-info">
+                <h3>Iniciación a la Creación de Páginas Web (HTML/CSS)</h3>
+                <p class="sub-info">**[Nombre de la Institución/Plataforma]** | [Fecha]</p>
+            </div>
+
+            <div class="bloque-info">
+                <h3>Ofimática Avanzada: Word, Excel y Power Point</h3>
+                <p class="sub-info">**[Nombre de la Institución/Plataforma]** | [Fecha]</p>
+            </div>
+
+            <div class="bloque-info">
+                <h3>Ambiente Windows y Gestión Informática Básica</h3>
+                <p class="sub-info">**[Nombre de la Institución/Plataforma]** | [Fecha]</p>
+            </div>
+
+            <div class="bloque-info">
+                <h3>Gestión Logística y Trazabilidad de Productos</h3>
+                <p class="sub-info">**[Nombre de la Institución/Plataforma]** | [Fecha]</p>
+            </div>
+            
+            <div class="bloque-info">
+                <h3>[Nombre de la Titulación Universitaria]</h3>
+                <p class="sub-info">**[Nombre de la Institución Universitaria]** | [Año de Finalización]</p>
+            </div>
+        </section>
+        
+        <section class="seccion">
+            <h2>Experiencia Laboral</h2>
+            
+            <div class="bloque-info">
+                <h3> SECRETARIA DE DIRECCIÓN</h3>
+                <p class="sub-info">  Ministerio del Poder Popular para la Educación | [2016] - [2018]</p>
+                <ul>
+                    <li>**Archivo y Gestión Documental:** Organizar, clasificar y mantener el archivo físico y digital (documentos, expedientes, contratos) de manera segura y accesible.</li>
+                    <li>**Gestión Administrativa:** Manejar caja chica, registrar gastos menores y preparar informes de gastos para el departamento de contabilidad.</li>
+                    <li>**Logística:** Gestionar el inventario, realizar pedidos de material de oficina y supervisar el mantenimiento básico del equipo.</li>
+                </ul>
+            </div>
+             <div class="bloque-info">
+                <h3> SECRETARIA</h3>
+                <p class="sub-info">  Instituto Autonomo de Infraestructura del Estado Vargas | [2009] - [2010]</p>
+                    <ul>
+                    <li>**Soporte Operativo:** Responsable de la organización de la oficina para asegurar un espacio de trabajo funcional y eficiente.</li>
+                    <li>**Documentación:** Tareas de organización, clasificación y archivo de documentos institucionales.</li>
+                    <li>**Coordinación:** Apoyo en la gestión de suministros y equipamiento básico de la infraestructura.</li>
+                </ul>
+            </div>
+           
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Este CV fue diseñado con HTML, CSS profesional y un toque de JavaScript. **© 2024 Angela Briceño. Todos los derechos reservados.**</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const themeToggle = document.getElementById('toggle-theme');
+            const contrastToggle = document.getElementById('toggle-contrast');
+            const fontIncrease = document.getElementById('font-increase');
+            const fontDecrease = document.getElementById('font-decrease');
+
+            // --- 1. GESTIÓN DE TEMAS (Modo Oscuro) ---
+            const loadTheme = () => {
+                if (localStorage.getItem('theme') === 'dark') {
+                    body.classList.add('dark-mode');
+                }
+            };
+
+            themeToggle.onclick = () => {
+                body.classList.toggle('dark-mode');
+                
+                // Asegura que no se active Alto Contraste al mismo tiempo
+                if (body.classList.contains('dark-mode') && body.classList.contains('high-contrast')) {
+                    body.classList.remove('high-contrast');
+                    localStorage.setItem('contrast', 'off');
+                }
+
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            };
+            
+            // --- 2. MODO ALTO CONTRASTE ---
+            const loadContrast = () => {
+                if (localStorage.getItem('contrast') === 'on') {
+                    body.classList.add('high-contrast');
+                }
+            };
+
+            contrastToggle.onclick = () => {
+                body.classList.toggle('high-contrast');
+                
+                // Asegura que no se active Modo Oscuro al mismo tiempo
+                if (body.classList.contains('high-contrast') && body.classList.contains('dark-mode')) {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('theme', 'light');
+                }
+
+                if (body.classList.contains('high-contrast')) {
+                    localStorage.setItem('contrast', 'on');
+                } else {
+                    localStorage.setItem('contrast', 'off');
+                }
+            };
+            
+            // --- 3. CAMBIO DE TAMAÑO DE FUENTE ---
+            let currentFontSize = parseFloat(getComputedStyle(body).fontSize); // Obtiene el tamaño base (16px)
+
+            fontIncrease.onclick = () => {
+                // Aumenta la fuente en 1px, con un límite máximo
+                if (currentFontSize < 24) { 
+                    currentFontSize += 1;
+                    body.style.fontSize = `${currentFontSize}px`;
+                }
+            };
+
+            fontDecrease.onclick = () => {
+                // Disminuye la fuente en 1px, con un límite mínimo
+                if (currentFontSize > 14) { 
+                    currentFontSize -= 1;
+                    body.style.fontSize = `${currentFontSize}px`;
+                }
+            };
+
+            // Carga inicial de temas
+            loadTheme();
+            loadContrast();
+        });
+    </script>
+</body>
+</html>
